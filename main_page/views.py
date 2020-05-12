@@ -4,4 +4,12 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('<h1>Hello World</h1>')
+    return render(request, 'main_page/index.html')
+
+
+def about(request):
+    return render(request, 'main_page/about.html')
+
+
+def services(request):
+    return render(request, 'main_page/services.html')
