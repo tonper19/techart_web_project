@@ -1,5 +1,52 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>this the Index page</h1>
+<section id="showcase">
+    <div class="container">
+        <h1>Affordable Remote Software Development</h1>
+        <p>Remote software development is becoming the trend, lower employment expenditure, higher productivity,
+            zero infrastructure cost, motivated developers and high level commitment, these are few of the benefits.
+        </p>
+        <p>Remote work is here to stay.</p>
+    </div>
+</section>
+
+<!-- <section id="newsletter">
+    <div class="container">
+      <h1>Contact us</h1>
+      <form class="process.js" action="index.html" method="post">
+        <input type="email" placeholder="Enter Email...">
+        <button type="submit" class="button_1" name="button">Subscribe</button>
+
+      </form>
+    </div>
+  </section> -->
+
+<section id="boxes">
+    <div class="container">
+        <div class="box">
+            <img src="{% static 'img/django.png' %}" alt="Django Web Development">
+            <h3>Django Web Development</h3>
+            <p>Database-driven website development using the best Python web framework.</p>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'img/database.png' %}" alt="Database Development">
+            <h3>Databases</h3>
+            <p>We have ample experience on deliverying database applications with emphasis in
+                SQL engines, like Oracle.</p>
+        </div>
+
+        <div class="box">
+            <img src="{% static 'img/python.png' %}" alt="Python Development">
+            <h3>Python Development</h3>
+            <p>Fast development, readability, maintainability and large standard library are the
+                reasons we specialize in Python development.
+            </p>
+        </div>
+
+    </div>
+</section>
+
 {% endblock %}

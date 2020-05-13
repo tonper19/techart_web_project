@@ -1,5 +1,61 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>this the Services page</h1>
+<section id="main">
+    <div class="container">
+        <article id="main-col">
+            <h1 class="page-title">Services</h1>
+
+            <ul id="services">
+                <li>
+                    <h3>Small Scale Projects</h3>
+                    <p>Do you need help to complete a small task, we are here to help you.
+                        These projects usually last up to a month.
+                    </p>
+                </li>
+
+                <li>
+                    <h3>Database Design and Development</h3>
+                    <p>We will design, develop and deploy your database tailored to your needs.</p>
+                </li>
+
+                <li>
+                    <h3>Business Intelligence Projects</h3>
+                    <p>Do you need to have insights on your data? We can help you
+                        from beginning to end. We collect and transform columnar information
+                        into visualizations with the key performance indicators of your business.</p>
+                </li>
+
+
+                <li>
+                    <h3>Large Scale Projects</h3>
+                    <p>They usually take from one to six months.</p>
+                </li>
+
+            </ul>
+        </article>
+
+        <aside id="sidebar">
+            <div class="dark">
+                <h3>Get in touch</h3>
+                <form class="quote" action="index.html" method="post">
+                    <div class="">
+                        <label for="">Name</label><br>
+                        <input type="text" placeholder="Name" name="" value="">
+                    </div>
+                    <div class="">
+                        <label for="">Email</label><br>
+                        <input type="email" placeholder="Email Address" name="" value="">
+                    </div>
+                    <div class="">
+                        <label for="">Message</label><br>
+                        <textarea name="" placeholder="Message"></textarea>
+                    </div>
+                    <button class="button_1" type="submit" name="button">Send</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+</section>
+
 {% endblock %}

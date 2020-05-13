@@ -1,5 +1,38 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>this the About page</h1>
+<section id="main">
+    <div class="container">
+        <article id="main-col">
+            <h1 class="page-title">About Us</h1>
+            <p>Technology Artisans was born in Belgium in 2009. The name explains the two notions
+                we strive for, to have a balance between technology innovation and the love for
+                handcrafted artifacts. We are proud of the products we produce.
+            </p>
+            <p class="dark">
+                Technology Artisans has develoved for clients from several areas
+                <ul class="ul_dark">
+                    <li>Government</li>
+                    <li>Health Organizations</li>
+                    <li>Insurance</li>
+                    <li>Aviation</li>
+                    <li>Hospitality</li>
+                    <li>Logistics</li>
+                    <li>Cruise Line Operator</li>
+                </ul>
+            </p>
+        </article>
+
+        <aside id="sidebar">
+            <div class="dark">
+                <h3>What We Do</h3>
+                <p>Python development, performant database design and Django
+                    framework to build database-driven web applications. We have Business Intelligence
+                    experience, specially on Extract, Transform and Loading datawarehouses and
+                    Microstrategy for Business Analytics.
+                </p>
+            </div>
+        </aside>
+    </div>
+</section>
 {% endblock %}

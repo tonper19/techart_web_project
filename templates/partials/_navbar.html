@@ -8,9 +8,15 @@
         <nav>
             <h1 class="techart"><span class="highlight">Technology</span> Artisans</h1>
             <ul>
-                <li class="current"><a href="index.html">Home</a> </li>
-                <li><a href="about.html">About</a> </li>
-                <li><a href="services.html">Services</a> </li>
+                <li {% if '/' == request.path %} class="current" {% else %} class="non_current" {% endif %}>
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li {% if 'about' in request.path %} class="current" {% else %} class="non_current" {% endif %}>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+                <li {% if 'services' in request.path %} class="current" {% else %} class="non_current" {% endif %}>
+                    <a href="{% url 'services' %}">Services</a>
+                </li>
             </ul>
         </nav>
     </div>
