@@ -1,14 +1,26 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technology Artisans SPRL</title>
+    <meta name="description"
+        content="Affordable and professional Technology: Python, Web Design, Application Development, Databases">
+    <meta name="keywords" content="python, django web development, application development, databases, sql, oracle">
+    <meta name="author" content="Tony Perez">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Technology Artisans SPRL | Welcome</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
 <body>
+    <!-- header / nav bar -->
+    {% include 'partials/_navbar.html' %}
+    <!-- Main content -->
     {% block content %} {% endblock %}
+    <!-- footer -->
+    {% include 'partials/_footer.html' %}
 </body>
 
 </html>
