@@ -21,5 +21,5 @@ class Contact(models.Model):
     contact_details = models.TextField(blank=True)
 
     def __str__(self):
-        name = f"{self.last_name}, {self.first_name} ({company})"
+        name = f"{self.last_name}, {self.first_name} ({self.company})"
         return name
