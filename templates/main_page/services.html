@@ -38,32 +38,34 @@
         <aside id="sidebar">
             <div class="dark">
                 <h3>Get in touch</h3>
-                <form class="quote" action="index.html" method="post">
+                <form class="quote" action="{% url 'contact' %}" method="POST">
+                    {% csrf_token %}
                     <div class="">
                         <label for="">Last Name</label><br>
-                        <input type="text" placeholder="Last Name" name="" value="">
+                        <input type="text" placeholder="Last Name" name="last_name" value="" required>
                     </div>
                     <div class="">
                         <label for="">First Name</label><br>
-                        <input type="text" placeholder="First Name" name="" value="">
+                        <input type="text" placeholder="First Name" name="first_name" value="">
                     </div>
                     <div class="">
                         <label for="">Company</label><br>
-                        <input type="text" placeholder="Company" name="" value="">
+                        <input type="text" placeholder="Company" name="company" value="" required>
                     </div>
                     <div class="">
                         <label for="">Telephone</label><br>
-                        <input type="text" placeholder="Telephone" name="" value="">
+                        <input type="text" placeholder="Telephone" name="telephone" value="">
                     </div>
                     <div class="">
                         <label for="">Email</label><br>
-                        <input type="email" placeholder="Email Address" name="" value="">
+                        <input type="email" placeholder="Email Address" name="email_address" value="" required>
                     </div>
                     <div class="">
                         <label for="">Message</label><br>
-                        <textarea name="" placeholder="Message"></textarea>
+                        <textarea name="message" placeholder="Message"></textarea>
                     </div>
                     <button class="button_1" type="submit" name="button">Send</button>
+                    {% include "partials/_alerts.html" %}
                 </form>
             </div>
         </aside>
