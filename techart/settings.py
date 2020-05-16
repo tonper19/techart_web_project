@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'analytical',                 # django-analytical
+    # How to Get Visitor Detail Information in Django?
+    # https://medium.com/@arrosid/how-to-get-visitor-detail-information-in-django-687fbe565f7e
+    'django_user_agents',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # How to Get Visitor Detail Information in Django?
+    'django_user_agents.middleware.UserAgentMiddleware',
 ]
 
 ROOT_URLCONF = 'techart.urls'
@@ -127,3 +133,6 @@ STATICFILES_DIRS = [
 ]
 # 20200513 After adding STATIC_ROOT and STATICFILES_DIRS, run the command:
 # $ python manage.py collectstatic
+
+# django-analytical: https://clicky.com/stats/prefs?site_id=101255373
+CLICKY_SITE_ID = 'c3bf5ace0909ddb1'

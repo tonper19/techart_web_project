@@ -1,8 +1,12 @@
 {% load static %}
+<!-- django-analytical -->
+{% load analytical %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    {% analytical_head_top %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
@@ -12,15 +16,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Technology Artisans SPRL | Welcome</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% analytical_head_bottom %}
 </head>
 
 <body>
+    {% analytical_body_top %}
     <!-- header / nav bar -->
     {% include 'partials/_navbar.html' %}
     <!-- Main content -->
     {% block content %} {% endblock %}
     <!-- footer -->
     {% include 'partials/_footer.html' %}
+    {% analytical_body_bottom %}
 </body>
 
 </html>
