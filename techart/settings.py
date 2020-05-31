@@ -136,3 +136,9 @@ STATICFILES_DIRS = [
 
 # django-analytical: https://clicky.com/stats/prefs?site_id=101255373
 CLICKY_SITE_ID = 'c3bf5ace0909ddb1'
+
+# local_settings will live in Production only
+try:
+    from .local_settings import *
+except ImportError:
+    pass
